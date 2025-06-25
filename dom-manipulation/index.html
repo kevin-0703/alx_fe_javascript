@@ -20,7 +20,8 @@
         margin-bottom: 10px;
       }
       input,
-      button {
+      button,
+      select {
         width: 100%;
         padding: 8px;
         margin-top: 4px;
@@ -30,7 +31,13 @@
   <body>
     <h1>Dynamic Quote Generator</h1>
 
-    <!-- Display Quote -->
+    <!-- Category Filter -->
+    <label for="categoryFilter"><strong>Filter by Category:</strong></label>
+    <select id="categoryFilter" onchange="filterQuotes()">
+      <option value="all">All Categories</option>
+    </select>
+
+    <!-- Quote Display -->
     <div id="quoteDisplay">Click the button to see a quote.</div>
     <button id="newQuote">Show New Quote</button>
 
@@ -39,12 +46,8 @@
 
     <!-- Import / Export -->
     <h3>Import / Export Quotes</h3>
-
-    <!-- ✅ Import Quotes -->
     <label for="importFile"><strong>Import Quotes:</strong></label>
     <input type="file" id="importFile" accept=".json" />
-
-    <!-- ✅ Export Quotes -->
     <button id="exportJson">Export Quotes</button>
 
     <script src="script.js"></script>
