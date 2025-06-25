@@ -19,42 +19,34 @@
       .form-group {
         margin-bottom: 10px;
       }
-      input {
-        width: 100%;
-        padding: 6px;
-        margin-top: 4px;
-      }
+      input,
       button {
-        padding: 8px 12px;
-        cursor: pointer;
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
       }
     </style>
   </head>
   <body>
     <h1>Dynamic Quote Generator</h1>
 
-    <!-- Quote display -->
+    <!-- Display Quote -->
     <div id="quoteDisplay">Click the button to see a quote.</div>
     <button id="newQuote">Show New Quote</button>
 
-    <!-- Form for adding new quote -->
-    <div id="quoteForm" style="margin-top: 20px">
-      <div class="form-group">
-        <label for="newQuoteText">Quote Text</label>
-        <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
-      </div>
-      <div class="form-group">
-        <label for="newQuoteCategory">Quote Category</label>
-        <input
-          id="newQuoteCategory"
-          type="text"
-          placeholder="Enter quote category"
-        />
-      </div>
-      <button onclick="addQuote()">Add Quote</button>
-    </div>
+    <!-- Add Quote Form -->
+    <div id="formContainer"></div>
 
-    <!-- JavaScript -->
+    <!-- Import / Export -->
+    <h3>Import / Export Quotes</h3>
+
+    <!-- ✅ Import Quotes -->
+    <label for="importFile"><strong>Import Quotes:</strong></label>
+    <input type="file" id="importFile" accept=".json" />
+
+    <!-- ✅ Export Quotes -->
+    <button id="exportJson">Export Quotes</button>
+
     <script src="script.js"></script>
   </body>
 </html>
