@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
             quotes = serverQuotes;
             localStorage.setItem("quotes", JSON.stringify(quotes));
             populateCategories();
-            syncStatus.textContent = "Quotes synced. Server data has overwritten local quotes.";
+            syncStatus.textContent = "Quotes synced with server!";
         } else {
             syncStatus.textContent = "Quotes are up to date.";
         }
