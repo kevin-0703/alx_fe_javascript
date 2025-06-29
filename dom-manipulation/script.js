@@ -1,7 +1,7 @@
 const syncStatus = document.getElementById("syncStatus");
 const syncBtn = document.getElementById("syncBtn");
 
-async function fetchServerQuotes() {
+async function fetchQuotesFromServer() {
     try {
         syncStatus.textContent = "Fetching quotes from server...";
         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -26,7 +26,7 @@ function areQuotesDifferent(localQuotes, serverQuotes) {
 }
 
 async function syncQuotes() {
-    const serverQuotes = await fetchServerQuotes();
+    const serverQuotes = await fetchQuotesFromServer();
 
     if (serverQuotes.length === 0) {
         return;
